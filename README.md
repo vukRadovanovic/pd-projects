@@ -4,7 +4,7 @@ My Pure Data projects.
 ### folddelay~
 Folddelay~ implements a feedback delay whose feedback level is automatically controlled by an envelope follower.  It adds distortion by wavefolding the output.
 
-This is a custom Pd object written in C, so it must be compiled from source.  You can drop the folddelay~ directory into the [Pd source code](https://github.com/pure-data/pure-data)'s extra/ directory.  Then, edit extra/Makefile.am to include it in the SUBDIRS, and also edit configure.ac to add it to the list of outputs. (You can search for bonk~ to see how the edits should be formatted.)  Then just autogen->configure->make.
+This is a custom Pd object written in C, so it must be compiled from source.  You can drop the folddelay~/ directory into the [Pd source code](https://github.com/pure-data/pure-data)'s extra/ directory.  Then, edit `extra/Makefile.am` to include it in the SUBDIRS, and also edit `configure.ac` to add it to the list of outputs. (You can search for bonk~ to see how the edits should be formatted.)  Then just autogen->configure->make.
 
 ### heterodyne
 An older, uncommon resynthesis method.  It uses a bank of [heterodyne](https://en.wikipedia.org/wiki/Heterodyne) frequency shifts + low pass filters to isolate the amplitudes of a set of semitones (as opposed to contemporary approaches like FFT).  It then uses a bank of corresponding sine voices to approximate the original audio.  Additionally, voices can be selectively enabled/disabled to, for example, output only the notes of a specific chord.

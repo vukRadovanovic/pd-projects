@@ -1,0 +1,66 @@
+#N canvas 372 145 544 587 10;
+#X obj 155 128 inlet~;
+#X obj 155 190 writesf~ 1;
+#X msg 261 80 open -bytes 3 \$1;
+#X obj 163 166 r \$0-writesf;
+#X obj 261 553 s \$0-writesf;
+#X msg 276 497 start;
+#X msg 295 521 stop;
+#X obj 276 219 r \$0-startStop;
+#X obj 276 240 sel 1 0;
+#X obj 52 136 cnv 15 80 30 \$0-canvas \$0-canvas-r WAITING 7 15 0 14
+-262144 -66577 0;
+#X obj 261 17 r \$0-bang;
+#X obj 336 269 \$0;
+#X obj 96 116 tgl 15 0 \$0-startStop \$0-startStop-r empty 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 52 116 bng 15 250 50 0 \$0-bang \$0-bang-r empty 17 7 0 10 -262144
+-1 -1;
+#X text 69 114 open;
+#X text 112 114 go!;
+#X obj 275 123 \$0;
+#X obj 275 103 b;
+#X obj 261 39 savepanel;
+#X obj 343 391 == 1;
+#X obj 343 368 f;
+#X msg 275 143 \; \$1-canvas-r label STANDBY \; \$1-canvas-r color
+6 2 \; \$1-checkCond 1 \; \$1-print STANDBY;
+#X obj 133 37 r \$0-print;
+#X obj 358 346 r \$0-checkCond;
+#X obj 343 414 sel 1;
+#X obj 336 246 loadbang;
+#X obj 269 59 s \$0-filepath;
+#X obj 394 417 r \$0-filepath;
+#X obj 343 438 pack \$0 s;
+#X obj 133 60 print recordMono;
+#X msg 343 459 \; \$1-canvas-r label RECORDING \; \$1-canvas-r color
+14 2 \; \$1-checkCond 0 \; \$1-print RECORDING \; \$1-print saved as:
+\$2;
+#X msg 336 290 \; \$1-canvas-r label WAITING \; \$1-canvas-r color
+0 2 \;;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 2 0 17 0;
+#X connect 3 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 8 0 20 0;
+#X connect 8 1 6 0;
+#X connect 8 1 11 0;
+#X connect 10 0 18 0;
+#X connect 11 0 31 0;
+#X connect 16 0 21 0;
+#X connect 17 0 16 0;
+#X connect 18 0 2 0;
+#X connect 18 0 26 0;
+#X connect 19 0 24 0;
+#X connect 20 0 19 0;
+#X connect 22 0 29 0;
+#X connect 23 0 20 1;
+#X connect 24 0 28 0;
+#X connect 25 0 11 0;
+#X connect 27 0 28 1;
+#X connect 28 0 30 0;
+#X coords 0 -1 1 1 85 68 1 50 100;

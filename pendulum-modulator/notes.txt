@@ -1,0 +1,22 @@
+GEM - graphical representation
+pmpd - physical modeling for pure data.  used for the simulation itself
+
+use pmpd for the physics calculations, use GEM to show off the pendulum.
+
+
+
+GEM:
+https://puredata.info/downloads/gem/documentation/tutorial/primer/GEMtutorial.pdf
+https://puredata.info/downloads/gem/documentation/tutorial/particles/gem-outline_en.pdf
+
+
+
+PMPD:
+
+
+
+
+
+
+use pmpd's "test collision" objects [tSquare2D] or [tCircle2D] to detect user clicks and allow them to 
+drag the pendulum around.

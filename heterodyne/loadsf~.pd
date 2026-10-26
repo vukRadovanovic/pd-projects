@@ -1,0 +1,24 @@
+#N canvas 1030 655 497 309 12;
+#X obj 24 28 inlet bang;
+#X obj 118 28 inlet path;
+#X obj 24 59 openpanel;
+#X obj 24 188 soundfiler;
+#X obj 24 84 t s b;
+#X obj 24 215 outlet numSamples;
+#X obj 91 243 outlet info;
+#X obj 77 104 symbol \$1;
+#X obj 24 133 pack s s;
+#X msg 24 159 read -resize \$1 \$2;
+#X text 158 57 Load a soundfile \; accepts a bang or a path \; outputs
+the number of samples and the info \; as soundfiler.;
+#X text 143 189 Arguments: the name of the table to load;
+#X connect 0 0 2 0;
+#X connect 1 0 8 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 3 1 6 0;
+#X connect 4 0 8 0;
+#X connect 4 1 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;

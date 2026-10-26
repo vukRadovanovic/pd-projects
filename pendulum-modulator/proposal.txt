@@ -1,0 +1,16 @@
+My idea for a final project is to create a double-pendulum physics simulation using the external libraries Gem and (maybe) pmpd.
+This pendulum would be used as both an abstraction and a visualizer, where the simulation would be displayed in a Gem window,
+and the weights of the pendulum could be dragged around by the user and then released.  Various values would be needed
+to simulate the pendulum, and any of them could potentially be used as outputs for the abstraction, but I think the best option would be
+for the x and y coordinates for the second weight of the pendulum to be scaled to float values from 0 to 1, and passed to the outlets.
+My intention with this is to create a continuously changing control object that has pseudo-random rates of change based on the intial
+positions of the weights.  As an example for a potential demonstration for this project, I would use the values of the pendulum to continuously change
+the index of modulation of a ring modulator, or change a delay timing randomly and continuously.
+
+Whether or not I will need to use pmpd (a physics simulation library for pd) is still uncertain, as I have found a very useful website 
+with a double-pendulum simulation that explains all of the equations used to create it.  I believe it would be a lot more
+fun and challenging to create the simulation from scratch, as it would force me to learn how to use data structures in pd and require a lot
+more effort in its creation.
+
+Double-pendulum website:
+https://www.myphysicslab.com/pendulum/double-pendulum-en.html

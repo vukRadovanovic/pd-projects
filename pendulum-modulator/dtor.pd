@@ -1,0 +1,10 @@
+#N canvas 1226 175 450 316 12;
+#X obj 52 53 inlet;
+#X obj 52 209 outlet;
+#X text 172 90 355/113 = pi;
+#X obj 52 105 * 355;
+#X obj 52 157 / 20340;
+#X text 177 163 180 * 113 = 20340;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
